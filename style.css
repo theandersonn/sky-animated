@@ -1,0 +1,372 @@
+body {
+    padding-top: 75px;
+    overflow: hidden;
+    animation: trocaTurno 60s linear infinite;
+}
+
+@keyframes trocaTurno {
+    0%,
+    100% {
+        background-color: #B8E2FC;
+    }
+    50% {
+        background-color: #87cefa;
+    }
+    75% {
+        background-color: #0073cf;
+    }
+}
+
+.cloud {
+    margin-bottom: 100px;
+    background-color: #fff;
+    border-radius: 100px;
+    height: 100px;
+    width: 330px;
+    position: relative;
+    opacity: .7;
+}
+
+.cloud:before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 120px;
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 200px;
+}
+
+.cloud:after {
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    height: 100px;
+    left: 50px;
+    top: -50px;
+    width: 100px;
+    background-color: #fff;
+}
+
+.c1 {
+    animation: animateCloud 30s linear infinite;
+}
+
+.c2 {
+    animation: animateCloud 40s linear infinite;
+    transform: scale(.50);
+}
+
+.c3 {
+    animation: animateCloud 80s linear infinite;
+    transform: scale(.40);
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -250px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
+
+.sun_box {
+    position: relative;
+    top: -80px;
+    right: -15px;
+}
+
+.sun {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(253, 249, 19);
+    border-radius: 50%;
+}
+
+.rays1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+    background-color: #FDB813;
+
+    animation: animateRaysLeft 45s linear infinite;
+}
+
+.rays2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+    background-color: #FDB813;
+
+    animation: animateRaysRight 45s linear infinite;
+}
+
+@keyframes animateRaysRight {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateRaysLeft {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.airship {
+    display: inline-block;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    z-index: -1;
+
+    animation: animateairship 45s linear infinite;
+}
+
+.airship__balloon {
+    position: relative;
+    z-index: -1px;
+    background-color: rgb(99, 196, 86);
+    width: 300px;
+    height: 100px;
+
+    border-top-left-radius: 50%;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 50%;
+}
+
+.airship__ligacao {
+    background-color: rgb(201, 120, 28);
+    width: 150px;
+    height: 20px;
+    margin: -15px auto 0 auto;
+}
+
+.airship__cabine {
+    background-color: rgb(201, 120, 28);
+    width: 130px;
+    height: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.window {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 3px 0 0 0;
+}
+
+.window__item {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    margin-left: 15px;
+    float: left;
+}
+
+.window__item:first-of-type {
+    margin-left: 0;
+}
+
+@keyframes animateairship {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: 100%;
+    }
+}
+
+.balloon {
+    position: absolute;
+    right: 200px;
+    top: 150px;
+
+    animation: balancaBallon 4s linear infinite;
+}
+
+.balloon2 {
+    position: absolute;
+    left: 200px;
+    bottom: 50px;
+    transform: scale(.2) !important;
+    animation: balancaBallon 6s linear infinite;
+}
+
+.balloon__ball2 {
+    background-color: #f39c12;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.balloon__box2 {
+    position: relative;
+    background-color: #d35400;
+    width: 30px;
+    height: 30px;
+    margin: 30px auto 0 auto;
+}
+
+.balloon__box2:after {
+    position: absolute;
+    top: -65px;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 2px;
+    height: 65px;
+    background-color: green;
+}
+
+.balloon__box2:before {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 2px;
+    height: 65px;
+    background-color: green;
+}
+
+.balloon__ball {
+    background-color: #f39c12;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.balloon__box {
+    position: relative;
+    background-color: #d35400;
+    width: 60px;
+    height: 60px;
+    margin: 50px auto 0 auto;
+}
+
+.balloon__box:after {
+    position: absolute;
+    top: -65px;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 3px;
+    height: 65px;
+    background-color: green;
+}
+
+.balloon__box:before {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 3px;
+    height: 65px;
+    background-color: green;
+}
+
+@keyframes balancaBallon {
+    0%,
+    100% {
+        transform: rotate(8deg);
+    }
+    50% {
+        transform: rotate(-8deg);
+    }
+}
+
+.bird {
+    position: relative;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 999;
+    animation: flying 0.8s linear infinite;
+}
+
+.bird:after,
+.bird:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+}
+
+.bird:after {
+    border-radius: 100% 100% 0 0;
+    box-shadow: inset 0px 5px 0 black;
+    width: 100px;
+    height: 100px;
+    margin-top: -7px;
+    margin-left: -50px;
+    transform-origin: 100% 0%;
+    animation: bateAsas 3s linear infinite;
+}
+
+@keyframes bateAsas {
+    50% {
+        transform: rotateX(-1440deg);
+    }
+}
+
+@keyframes flying {
+    40% {
+        transform: rotateZ(2deg) translateX(2px) translateY(10px) translateZ(0);
+    }
+    80% {
+        transform: rotateZ(-2deg) translateX(5px) translateY(8px) translateZ(0);
+    }
+}
+
+.bird__eyes {
+    position: absolute;
+    top: -15px;
+    list-style: none;
+    padding: 0;
+}
+
+.eyes {
+    float: left;
+    margin-left: 1px;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.bird__beak {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    border: 8px solid;
+    bottom: -16px;
+    border-color: red transparent transparent;
+}
